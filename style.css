@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    transition: .5s ease-in-out
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    color: #8e8e8e;
+}
+
+
+/*CONTAINER*/
+
+.container {
+    margin: 0 auto;
+    padding: 0px 15px;
+    max-width: 1200px;
+}
+
+
+/*HEADER*/
+
+.header {
+    padding-top: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*TOP MENU*/
+
+.nav {
+    padding-top: 15px;
+    font-size: 1em;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #8e8e8e;
+    transition: color .2s linear;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav_link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    display: block;
+    opacity: 0;
+    background-color: #069892;
+    transition: opacity .1s linear;
+}
+
+.nav_link:hover {
+    color: #069892;
+}
+
+.nav_link:hover:after {
+    opacity: 1;
+}
+
+
+/*BANNER*/
+
+.banner {
+    height: 540px;
+    background: url("../images/banner.png") center no-repeat;
+    background-size: cover;
+}
+
+
+/*INFO*/
+
+.info {
+    height: 750px;
+}
+
+.info_header {
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+}
+
+.info_text {
+    font-size: 0.92em;
+}
+
+.info_text_center {
+    text-align: center;
+}
+
+.info_image {
+    text-align: center;
+}
+
+
+/*GALLERY*/
+
+.gallery {
+    height: 700px;
+    background: url("../images/gallery.png") center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav {
+        display: none;
+    }
+    .nav_link {
+        display: block;
+        padding: 8px;
+    }
+    .toggle_btn {
+        text-align: center;
+        display: block;
+        cursor: pointer;
+    }
+    .toggle_btn::after {
+        content: attr(data-open);
+        display: block;
+    }
+    #menu_check:checked+nav[role="navigation"] .nav {
+        display: block;
+    }
+}
