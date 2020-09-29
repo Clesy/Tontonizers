@@ -147,20 +147,4 @@ p {
     .nav {
         display: none;
     }
-    .nav_link {
-        display: block;
-        padding: 8px;
-    }
-    .toggle_btn {
-        text-align: center;
-        display: block;
-        cursor: pointer;
-    }
-    .toggle_btn::after {
-        content: attr(data-open);
-        display: block;
-    }
-    #menu_check:checked+nav[role="navigation"] .nav {
-        display: block;
-    }
 }
