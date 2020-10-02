@@ -1,8 +1,5 @@
-$(document).ready(function() {
-
-    $('#menu-wrap').prepend("<div id='menu-icon'><b>Меню</b></div>");
-    $("#menu-icon").on("click", function() {
-        $(".menu").slideToggle();
-    });
-
+$('.menu-btn').on('click', function(e) {
+    e.preventDefault();
+    $('.menu').toggleClass('menu-active')
+    $('.container').toggleClass('container-active')
 });
