@@ -110,10 +110,63 @@ p {
     background-size: cover;
 }
 
-.mediummm {
-    height: 500px;
+
+/*FOOTER*/
+
+.footer {
+    height: 40px;
+    background-color: white;
+}
+
+.copiring-info {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    position: relative;
+}
+
+.social ul {
+    display: flex;
+    padding: 0;
     margin: 0;
-    background-color: yellowgreen;
+    position: absolute;
+}
+
+.social ul li {
+    margin: 0px 5px;
+    list-style: none;
+}
+
+.social ul li .fa {
+    font-size: 15px;
+    line-height: 30px;
+    transition: .6s;
+    color: #fff;
+}
+
+.social ul li a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #222;
+    text-align: center;
+}
+
+.social ul li:nth-child(1) a:hover {
+    background: #3b5999
+}
+
+.social ul li:nth-child(2) a:hover {
+    background: #00AFF0
 }
 
 
@@ -156,8 +209,8 @@ p {
         display: block;
         width: 30px;
         height: 30px;
+        background-color: white;
         border-radius: 50%;
-        background-color: while;
         position: absolute;
         top: 0;
         left: -35px;
@@ -208,8 +261,5 @@ p {
         padding: 10px;
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    .navigation li:last-of-type a {
-        border-bottom: none;
     }
 }
