@@ -20,13 +20,9 @@
                 </div>
                 <div class="menu">
                     <nav class="navigation">
-                        <a class="menu-btn">
-                            <span></span>
-                        </a>
+                        <a class="menu-btn"><span></span></a>
                         <a class="nav_link" href="index.html">Home</a>
                         <a class="nav_link" href="products.html">Products</a>
-                        <a class="nav_link" href="contactUs.html">Contact Us</a>
-                        <a class="nav_link" href="#">Career</a>
                         <a class="nav_link" href="about.html">About</a>
                     </nav>
                 </div>
@@ -34,6 +30,24 @@
         </div>
     </header>
     <section>
+        <div class="chat">
+            <button class="open-button" onclick="openForm()">Chat</button>
+
+            <div class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1>Contact Us</h1>
+
+                    <label for="msg" id="msg1"><b>Your info</b></label>
+
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="email" id="email" name="email" placeholder="Your email..">
+                    <textarea placeholder="Type message.." name="text" name="msg" required id="message"></textarea>
+
+                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
         <div class="banner">
             <div class="container">
                 <div class="photo">
@@ -69,6 +83,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
 
 </body>
 
