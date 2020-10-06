@@ -1,5 +1,5 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -18,7 +18,9 @@ function showSlides() {
         slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 20000);
 
